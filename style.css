@@ -1,37 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
 :root {
   --secondary-color: #00e5cc;
-  --primary-color: #ff5a5f;
+  --primary-color: #060640;
+  --paragraph: #9090a7;
+  --openSans: "Open Sans", sans-serif;
+  --bg-color: #c4dfec;
+  --max-w: 73.125rem;
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: var(--openSans);
 }
 .special {
   color: var(--secondary-color);
+  transition: all 0.3s ease;
 }
 .nav-hero-container {
   padding: 1rem 2rem;
-  background-color: #f8f9fa;
+  background-color: var(--bg-color);
 }
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 73.125rem;
+  max-width: var(--max-w);
   height: 6.25rem;
-  flex-shrink: 0;
-  margin: auto;
+  padding: 0 1.25rem;
+  margin: 30px auto;
   border-radius: 0.625rem;
   background: #fff;
-}
-.logo {
-  color: #060640;
-  font-family: "Airbnb Cereal App";
-  font-size: 1.875rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.875rem;
 }
 .menu .menu-items {
   display: flex;
@@ -41,12 +41,164 @@
 }
 .menu .menu-items .menu-item {
   color: #828297;
-  font-family: "Airbnb Cereal App";
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 500;
   line-height: 0.875rem; /* 100% */
+  padding: 0.225rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 .menu .menu-items .active {
   color: var(--secondary-color);
 }
+.menu .menu-items .menu-item:hover {
+  color: var(--secondary-color);
+}
+.logo-text {
+  color: #060640;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.875rem;
+  cursor: pointer;
+  padding: 0 1.25rem;
+  transition: all 0.3s ease;
+}
+.logo-text:hover {
+  color: var(--secondary-color);
+}
+.logo-text:hover > .special {
+  color: var(--primary-color);
+}
+.sign-in-btn {
+  color: #000;
+  text-align: right;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 0.875rem; /* 100% */
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.sign-in-btn:hover {
+  color: var(--secondary-color);
+}
+.free-trial-btn {
+  color: #fff;
+  background-color: var(--primary-color);
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 0.875rem; /* 100% */
+  padding: 0.825rem 1.25rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.free-trial-btn:hover {
+  background-color: var(--secondary-color);
+}
+
+/* hero section css code */
+.hero {
+  max-width: var(--max-w);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  margin: 100px auto;
+}
+.hero-left {
+  max-width: 50%;
+}
+.hero-left .hero-title {
+  color: var(--primary-color, #060640);
+  width: 26.4375rem;
+  font-style: normal;
+  font-size: 2.725rem;
+  font-weight: 700;
+  line-height: 3.265rem;
+  color: var(--primary-color);
+  margin-bottom: 1.25rem;
+}
+.hero-left .hero-description {
+  width: 25.125rem;
+  color: var(--paragraph, #9090a7);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.75rem; /* 175% */
+}
+.get-started {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+.get-started .hero-btn {
+  color: #fff;
+  display: inline-flex;
+  height: 3.75rem;
+  padding: 0rem 2.1875rem 0rem 2.25rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.375rem;
+  background: var(--primary-color, #060640);
+  transition: all 0.3s ease;
+}
+.get-started .hero-btn:hover {
+  background: var(--secondary-color, #00e5cc);
+  color: var(--primary-color);
+}
+.get-started .hero-video img {
+  width: 4.75rem;
+  height: 4.75rem;
+  fill: #fff;
+  filter: drop-shadow(0px 10px 30px rgba(0, 229, 204, 0.1));
+}
+.testimony-quote {
+  width: 26.125rem;
+  height: 8.5rem;
+  margin: 30px auto;
+  border-radius: 0.875rem;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+}
+.testimony-quote .quote-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.625rem 1.25rem;
+}
+.testimony-quote .quote-rating .quote-svg {
+  width: 2rem;
+  height: 2rem;
+}
+.testimony-quote .quote-rating .rating {
+  width: 2.875rem;
+  height: 1.25rem;
+}
+.testimony-quote .quote {
+  width: 23.375rem;
+  margin: auto;
+  color: var(--paragraph, #9090a7);
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem; /* 171.429% */
+}
+.seth {
+  color: var(--paragraph, #9090a7);
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+.hero-right {
+  max-width: 50%;
+}
+.hero-right img {
+  width: 100%;
+}
+/* hero section css code end */
